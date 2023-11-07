@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 
-def home(request):
-    return HttpResponse("Hello, Django!")
+def api_data(request):
+    data = {
+        'key': 'Sanath'
+    }
+    return JsonResponse(data)
